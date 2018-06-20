@@ -13,10 +13,14 @@ class Dummy(object):
 
 if __name__ == '__main__':
 
-    register = {'Dummy': Dummy}
+    register = {
+        'String': str,
+        'Dummy': Dummy
+    }
 
     d = Dummy()
 
+    # Find the registered type
     for k, v in register.items():
         if isinstance(d, v):
             print(k)
